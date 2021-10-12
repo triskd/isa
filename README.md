@@ -32,7 +32,7 @@ autor: David Triska, xtrisk05
 
 - popis chovani programu: 
 	Po spusteni programu, program otestuje zda jsou zadane vsechny povinne argumenty, pokud nektery z nich chybi konci s navratovym kodem -1 a na stderr vypisuje chybove hlaseni.
-	Pote program naplnuje vyhledavaci tabulku s rozptylenymi symboly, ktera slouzi k ulozeni a vyhledavani zakazanych domen. Tato operace muze chvili trvat (pri naplneni testovacim souborem https://dbl.oisd.nl/ tato operace trvala zhruba 9s), dokonceni teto operace je signalizovano vypisem na stderr "vyhledavaci tabulka naplnena".
+	Pote program naplnuje vyhledavaci tabulku s rozptylenymi symboly, ktera slouzi k ulozeni a vyhledavani zakazanych domen. Tato operace muze chvili trvat , dokonceni teto operace je signalizovano vypisem na stderr "vyhledavaci tabulka naplnena".
 	Nasledne program vytvari a navazuje sockety na prislusne adresy a porty. Port na kterem program odesila DNS dotazy na zadany server, je nasledujici port nez na kterem program nasloucha, pokud tento port neni volny, dotazovaci socket se navaze na prvni volny port. Program nasledne nasloucha na zadanem/vychozim (53) portu dns dotazy.
 	Kazdy prichozi datagram nejdrive zkontroluje zda se a) jedna o validni DNS dotaz b) zda je tento dotaz typu A.
 	a) Pokud prichozi datagram nebyl DNS dotaz, resolver zasila DNS odpoved s chybovym kodem 1 - Format Error, kde jako ID uvede prvni 2byty prichoziho datagramu (pokud byl dlouhy alespon 2 byty). 
